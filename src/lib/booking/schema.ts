@@ -54,7 +54,7 @@ export const slotStepSchema = z.object({
       start: z.string().regex(/^\d{2}:\d{2}$/),
       end: z.string().regex(/^\d{2}:\d{2}$/),
     },
-    "Choisissez un jour puis une plage horaire.",
+    "Choisissez une plage horaire dans le tableau.",
   ),
 });
 

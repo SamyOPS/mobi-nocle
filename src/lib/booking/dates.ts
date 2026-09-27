@@ -69,12 +69,30 @@ export function formatLongDay(iso: IsoDate): string {
 /** « 09:00 » -> « 9 h », « 09:30 » -> « 9 h 30 » */
 export function formatTime(time: string): string {
   const [h, m] = time.split(":").map(Number);
-  return m === 0 ? `${h} h` : `${h} h ${String(m).padStart(2, "0")}`;
+  return m === 0 ? `${h}\u00a0h` : `${h}\u00a0h\u00a0${String(m).padStart(2, "0")}`;
 }
 
 /** « entre 9 h et 11 h » */
 export function formatWindow(start: string, end: string): string {
   return `entre ${formatTime(start)} et ${formatTime(end)}`;
+}
+
+/** « 9 h – 11 h » (version courte, pour les boutons de la grille) */
+export function formatWindowShort(start: string, end: string): string {
+  return `${formatTime(start)} – ${formatTime(end)}`;
+}
+
+const shortWeekdayFormatter = new Intl.DateTimeFormat("fr-FR", { weekday: "short" });
+const shortMonthFormatter = new Intl.DateTimeFormat("fr-FR", { month: "short" });
+
+/** En-tête de colonne : { weekday: « Mar. », date: « 29 sept. » } */
+export function formatColumnHeader(iso: IsoDate): { weekday: string; date: string } {
+  const date = fromIsoDate(iso);
+  const day = date.getDate();
+  return {
+    weekday: capitalize(shortWeekdayFormatter.format(date)),
+    date: `${day === 1 ? "1er" : day} ${shortMonthFormatter.format(date)}`,
+  };
 }
 
 /** Première lettre en majuscule (les jours sont en minuscules en français). */
