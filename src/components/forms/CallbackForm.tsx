@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/Button";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { CheckIcon } from "@/components/ui/icons";
 import { cn } from "@/lib/cn";
+import { focusBelowHeader } from "@/lib/focus";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -324,13 +325,6 @@ export function CallbackForm() {
       </Button>
     </form>
   );
-}
-
-/** Place le focus sur un bloc en le faisant défiler sous le header collant (scroll-padding-top). */
-function focusBelowHeader(element: HTMLElement | null) {
-  if (!element) return;
-  element.scrollIntoView({ block: "start", behavior: "instant" });
-  element.focus({ preventScroll: true });
 }
 
 function subscribeNoop() {

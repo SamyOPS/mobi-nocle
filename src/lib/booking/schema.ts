@@ -73,6 +73,10 @@ const contactFields = z.object({
     .max(MESSAGE_MAX_LENGTH, `Le message ne doit pas dépasser ${MESSAGE_MAX_LENGTH} caractères.`)
     .optional()
     .default(""),
+});
+
+/** Dernière étape : accord explicite, demandé juste avant la confirmation. */
+export const consentStepSchema = z.object({
   consentement: z.literal(true, "Votre accord est nécessaire pour enregistrer le rendez-vous."),
 });
 
@@ -97,6 +101,7 @@ export const bookingSchema = visitStepSchema
   .extend(addressStepSchema.shape)
   .extend(slotStepSchema.shape)
   .extend(contactFields.shape)
+  .extend(consentStepSchema.shape)
   .superRefine((data, ctx) => {
     if (data.pourQui === "proche" && (data.demandeurNom.length < 2 || !FRENCH_PHONE.test(data.demandeurTelephone))) {
       ctx.addIssue({ code: "custom", path: ["demandeurNom"], message: "Coordonnées du demandeur manquantes." });
