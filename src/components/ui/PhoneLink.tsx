@@ -1,5 +1,4 @@
 import { site, telHref } from "@/config/site";
-import { cn } from "@/lib/cn";
 import { buttonClasses } from "./Button";
 import { PhoneIcon } from "./icons";
 
@@ -16,12 +15,12 @@ export function PhoneLink({ variant = "primary", size = "md", className, prefix 
   return (
     <a
       href={telHref()}
-      className={buttonClasses({ variant, size, className: cn("whitespace-nowrap", className) })}
+      className={buttonClasses({ variant, size, className })}
     >
       <PhoneIcon className="size-6 shrink-0" />
       <span>
         {prefix ? `${prefix} ` : null}
-        {site.contact.phoneDisplay}
+        <span className="whitespace-nowrap">{site.contact.phoneDisplay}</span>
       </span>
     </a>
   );
