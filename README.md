@@ -21,6 +21,9 @@ npm run build
 | Couleurs, polices, styles de base | `src/app/globals.css` (bloc `@theme`) |
 | Logo (version compacte mobile, passage au SVG) | `src/components/brand/Logo.tsx` |
 | Envoi des demandes de rappel | `src/app/api/demande-rappel/route.ts` (voir le `TODO(envoi)`) |
+| Prise de rendez-vous : plages, jours, délai, mode démo | `site.booking` dans `src/config/site.ts` |
+| Prise de rendez-vous : branchement de la vraie API | `src/lib/booking/index.ts` (voir le `TODO(api-rdv)`), contrat dans `src/lib/booking/types.ts` |
+| Types de visite proposés | `src/content/rendez-vous.ts` |
 
 Toute valeur encore inconnue vaut `A_COMPLETER` et s'affiche « À COMPLÉTER » sur le site. Pour tout retrouver :
 
