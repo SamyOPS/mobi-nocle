@@ -67,6 +67,30 @@ export const site = {
     communes: [] as Commune[],
   },
 
+  booking: {
+    /**
+     * Mode démonstration : créneaux fictifs et bandeau d'avertissement.
+     * Passer à `false` UNIQUEMENT une fois la vraie API branchée (src/lib/booking/index.ts).
+     */
+    demoMode: true,
+    /**
+     * Plages horaires proposées. EXEMPLE À REMPLACER par vos vraies plages.
+     * Format 24 h « HH:MM ».
+     */
+    timeWindows: [
+      { start: "09:00", end: "11:00" },
+      { start: "11:00", end: "13:00" },
+      { start: "14:00", end: "16:00" },
+      { start: "16:00", end: "18:00" },
+    ],
+    /** Jours travaillés (1 = lundi … 7 = dimanche). EXEMPLE À REMPLACER. */
+    workingDays: [1, 2, 3, 4, 5],
+    /** Délai minimum avant le premier rendez-vous proposé, en jours. EXEMPLE À REMPLACER. */
+    minNoticeDays: 2,
+    /** Nombre de semaines proposées à la réservation. EXEMPLE À REMPLACER. */
+    weeksAhead: 4,
+  },
+
   pricing: {
     /** Frais de déplacement, ex. « Gratuits » ou « 15 € » */
     travelFees: A_COMPLETER,

@@ -8,7 +8,7 @@ import { z } from "zod";
  */
 
 /** Numéro français : 0X XX XX XX XX, +33 X XX XX XX XX ou 0033…, séparateurs espace, point ou tiret. */
-const FRENCH_PHONE = /^(?:(?:\+|00)33[\s.-]?|0)[1-9](?:[\s.-]?\d{2}){4}$/;
+export const FRENCH_PHONE = /^(?:(?:\+|00)33[\s.-]?|0)[1-9](?:[\s.-]?\d{2}){4}$/;
 
 export const MESSAGE_MAX_LENGTH = 300;
 
