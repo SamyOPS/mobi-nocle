@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Atkinson_Hyperlegible, Nunito } from "next/font/google";
 import { getSiteUrl, site } from "@/config/site";
 import { defaultOgImage } from "@/lib/metadata";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+import { SkipLink } from "@/components/layout/SkipLink";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -41,7 +44,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${nunito.variable} ${atkinson.variable}`}>
-      <body className="flex min-h-screen flex-col antialiased">{children}</body>
+      <body className="flex min-h-screen flex-col antialiased">
+        <SkipLink />
+        <Header />
+        <main id="contenu" tabIndex={-1} className="flex-1 focus:shadow-none focus:outline-none">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }

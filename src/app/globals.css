@@ -35,60 +35,61 @@
   --shadow-card-hover: 0 2px 4px rgb(26 26 26 / 0.08), 0 8px 24px rgb(46 90 122 / 0.14);
 }
 
-/*
- * La taille racine passe à 112.5 % : 1rem = 18px par défaut, tout en
- * respectant la taille de police choisie par l'utilisateur dans son navigateur.
- */
-html {
-  font-size: 112.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: var(--color-white);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
-  line-height: 1.65;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  line-height: 1.2;
-  text-wrap: balance;
-}
-
-p {
-  text-wrap: pretty;
-}
-
-a {
-  text-underline-offset: 0.2em;
-}
-
-/* Focus toujours très visible, quel que soit le fond. */
-:focus-visible {
-  outline: 3px solid var(--color-ink);
-  outline-offset: 3px;
-  box-shadow: 0 0 0 6px var(--color-lens);
-  border-radius: 0.375rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
+@layer base {
+  /*
+   * La taille racine passe à 112.5 % : 1rem = 18px par défaut, tout en
+   * respectant la taille de police choisie par l'utilisateur dans son navigateur.
+   */
   html {
-    scroll-behavior: auto;
+    font-size: 112.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8.5rem; /* hauteur du header collant */
+    -webkit-text-size-adjust: 100%;
   }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  body {
+    background: var(--color-white);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  /* Focus toujours très visible, quel que soit le fond. */
+  :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px var(--color-lens);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
