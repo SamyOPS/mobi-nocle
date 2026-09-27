@@ -14,7 +14,7 @@ export function Header() {
     <>
       {/* Barre collante : le téléphone reste toujours visible */}
       <header className="sticky top-0 z-50 bg-white shadow-card">
-        <Container className="relative flex items-center justify-between gap-4 py-2 sm:py-3">
+        <Container className="flex items-center justify-between gap-4 py-2 sm:py-3">
           <Link href="/" className="shrink-0 rounded-xl">
             <Logo eager className="w-36 sm:w-48 lg:w-52" />
           </Link>
@@ -32,7 +32,7 @@ export function Header() {
         {/* Bandeau d'appel mobile, pleine largeur */}
         <a
           href={telHref()}
-          className="flex min-h-12 items-center justify-center gap-3 bg-primary px-4 py-2 font-display text-lg font-extrabold text-white no-underline hover:bg-primary-dark lg:hidden"
+          className="flex min-h-12 items-center justify-center gap-3 bg-primary px-4 py-2 font-display text-lg font-extrabold text-white no-underline hover:bg-primary-dark focus-visible:shadow-none focus-visible:outline-white focus-visible:-outline-offset-[6px] lg:hidden"
         >
           <PhoneIcon className="size-6 shrink-0" />
           <span>Appeler le {site.contact.phoneDisplay}</span>

@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mobi'Nocle — site vitrine
 
-## Getting Started
+Site de Mobi'Nocle, opticien à domicile. Next.js 16 (App Router), TypeScript strict, Tailwind CSS v4. Toutes les pages sont générées statiquement, sauf la route `/api/demande-rappel`.
 
-First, run the development server:
+## Démarrer
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run lint
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Où modifier quoi
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Quoi | Où |
+|---|---|
+| Informations de l'entreprise (téléphone, horaires, zone, tarifs, mentions légales…) | `src/config/site.ts` |
+| Menus et liste des pages (sitemap) | `src/config/navigation.ts` |
+| Textes des étapes, services, points de confiance, FAQ | `src/content/*.ts` |
+| Couleurs, polices, styles de base | `src/app/globals.css` (bloc `@theme`) |
+| Logo (version compacte mobile, passage au SVG) | `src/components/brand/Logo.tsx` |
+| Envoi des demandes de rappel | `src/app/api/demande-rappel/route.ts` (voir le `TODO(envoi)`) |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Toute valeur encore inconnue vaut `A_COMPLETER` et s'affiche « À COMPLÉTER » sur le site. Pour tout retrouver :
 
-## Learn More
+```bash
+grep -rn "A_COMPLETER\|À COMPLÉTER\|BROUILLON\|TODO" src
+```
 
-To learn more about Next.js, take a look at the following resources:
+Les valeurs non renseignées sont retirées automatiquement des données structurées (JSON-LD).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+  app/            pages, layout, sitemap.ts, robots.ts, api/demande-rappel
+  components/
+    brand/        Logo
+    layout/       Header, MobileMenu, Footer, SkipLink, NavLink
+    ui/           Button, PhoneLink, Card, Section, ArcDivider, FramedCircle…
+    sections/     blocs de page (étapes, services, FAQ, appel à l'action…)
+    forms/        CallbackForm (seul formulaire, composant client)
+    seo/          JsonLd
+  config/         site.ts, navigation.ts
+  content/        textes éditables
+  lib/            métadonnées, JSON-LD, schéma zod, utilitaires
+```
 
-## Deploy on Vercel
+## Accessibilité
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Objectif WCAG 2.1 AA :
+- texte à 18 px minimum (taille racine à 112,5 %) ;
+- zones cliquables de 48 px minimum ;
+- focus toujours visible et lien d'évitement ;
+- aucune animation automatique, et `prefers-reduced-motion` respecté.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Les contrastes de chaque couple de couleurs sont calculés et notés en tête de `globals.css`. La couleur `arc` (#6F96B3) est réservée aux éléments décoratifs : ne jamais l'utiliser pour du texte.
+
+## Déploiement
+
+Prévu sur Vercel. Tant que `site.url` n'est pas renseigné, les URL absolues (sitemap, Open Graph, JSON-LD) utilisent `VERCEL_PROJECT_PRODUCTION_URL`, puis `http://localhost:3000` en dernier recours.

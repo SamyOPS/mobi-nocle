@@ -32,21 +32,23 @@ export default function ContactPage() {
               <PhoneLink size="lg" />
             </div>
             <dl className="mt-6 space-y-4">
-              <div className="flex items-start gap-3">
-                <ClockIcon className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <dt className="font-bold">Horaires</dt>
-                  {contact.openingHours.map((hours) => (
-                    <dd key={hours.label}>{hours.label}</dd>
-                  ))}
-                </div>
+              <div>
+                <dt className="flex items-center gap-3 font-bold">
+                  <ClockIcon className="size-6 shrink-0 text-primary" />
+                  Horaires
+                </dt>
+                {contact.openingHours.map((hours) => (
+                  <dd key={hours.label} className="pl-9">
+                    {hours.label}
+                  </dd>
+                ))}
               </div>
-              <div className="flex items-start gap-3">
-                <MailIcon className="mt-1 size-6 shrink-0 text-primary" />
-                <div>
-                  <dt className="font-bold">E-mail</dt>
-                  <dd className="break-all">{contact.email}</dd>
-                </div>
+              <div>
+                <dt className="flex items-center gap-3 font-bold">
+                  <MailIcon className="size-6 shrink-0 text-primary" />
+                  E-mail
+                </dt>
+                <dd className="break-all pl-9">{contact.email}</dd>
               </div>
             </dl>
           </Card>
