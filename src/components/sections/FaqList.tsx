@@ -15,18 +15,18 @@ export function FaqList({ items }: { items: FaqItem[] }) {
           key={item.question}
           className="group rounded-3xl border-2 border-lens bg-white shadow-card open:border-arc"
         >
-          <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-3xl px-6 py-4 font-display text-xl font-extrabold text-ink hover:bg-lens-light sm:text-2xl [&::-webkit-details-marker]:hidden">
+          <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 rounded-3xl px-5 py-3 font-display text-lg font-extrabold text-ink hover:bg-lens-light sm:text-xl [&::-webkit-details-marker]:hidden">
             <span>{frTypo(item.question)}</span>
             {/* Indicateur visuel ouvert / fermé, en forme de verre */}
             <span
               aria-hidden="true"
-              className="relative flex size-10 shrink-0 items-center justify-center rounded-full border-4 border-ink bg-lens-light"
+              className="relative flex size-9 shrink-0 items-center justify-center rounded-full border-4 border-ink bg-lens-light"
             >
               <span className="absolute h-1 w-4 rounded bg-ink" />
               <span className="absolute h-4 w-1 rounded bg-ink group-open:hidden" />
             </span>
           </summary>
-          <div className="space-y-3 px-6 pb-6 text-lg">
+          <div className="space-y-3 px-5 pb-5">
             {item.answer.map((paragraph) => (
               <p key={paragraph}>{frTypo(paragraph)}</p>
             ))}

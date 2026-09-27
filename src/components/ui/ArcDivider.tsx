@@ -35,7 +35,7 @@ export function ArcDivider({ from, to, className }: ArcDividerProps) {
         viewBox="0 0 1440 90"
         preserveAspectRatio="none"
         focusable="false"
-        className="block h-10 w-full sm:h-16"
+        className="block h-8 w-full sm:h-12"
       >
         {/* Fond de la section suivante, en dôme */}
         <path d="M0 90 Q720 0 1440 90 Z" className={fillClass[to]} fill="currentColor" />

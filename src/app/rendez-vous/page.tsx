@@ -43,7 +43,7 @@ export default function RendezVousPage() {
 
           <aside aria-labelledby="aide-rdv" className="lg:sticky lg:top-36">
             <Card className="bg-lens-light">
-              <h2 id="aide-rdv" className="text-2xl text-ink">
+              <h2 id="aide-rdv" className="text-xl text-ink">
                 Besoin d&apos;aide ?
               </h2>
               <p className="mt-3">Nous pouvons aussi prendre le rendez-vous avec vous par téléphone.</p>

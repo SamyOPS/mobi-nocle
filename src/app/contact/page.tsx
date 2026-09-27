@@ -34,7 +34,7 @@ export default function ContactPage() {
       <Section labelledBy="contact-telephone" className="pt-6 sm:pt-8">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.4fr]">
           <Card as="article" className="bg-lens-light lg:sticky lg:top-36">
-            <h2 id="contact-telephone" className="text-3xl text-ink">
+            <h2 id="contact-telephone" className="text-2xl text-ink">
               Par téléphone
             </h2>
             <p className="mt-3 text-lg">Le plus simple et le plus rapide.</p>
@@ -64,7 +64,7 @@ export default function ContactPage() {
           </Card>
 
           <div>
-            <h2 className="text-3xl text-ink">Demander à être rappelé</h2>
+            <h2 className="text-2xl text-ink">Demander à être rappelé</h2>
             <p className="mt-3 mb-8 text-lg">
               Remplissez ce court formulaire : nous vous rappelons {contact.callbackDelay}.
             </p>

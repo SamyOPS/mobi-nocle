@@ -36,7 +36,7 @@ export default function CommentCaSePassePage() {
         <div className="grid items-start gap-12 lg:grid-cols-[2fr_1fr]">
           <Steps variant="details" headingLevel="h3" />
           <Card as="article" className="bg-lens-light lg:sticky lg:top-36">
-            <h3 className="text-2xl text-ink">À préparer pour la visite</h3>
+            <h3 className="text-xl text-ink">À préparer pour la visite</h3>
             <ul className="mt-5 space-y-3">
               {aPreparer.map((item) => (
                 <li key={item} className="flex items-start gap-3">

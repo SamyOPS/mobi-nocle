@@ -22,7 +22,7 @@ export function SectionHeading({
   return (
     <div
       className={cn(
-        "mb-10 max-w-3xl",
+        "mb-8 max-w-3xl",
         align === "center" && "mx-auto text-center",
         className,
       )}
@@ -31,7 +31,7 @@ export function SectionHeading({
         id={id}
         className={cn(
           "text-ink",
-          Tag === "h1" ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl",
+          Tag === "h1" ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl",
         )}
       >
         {frTypo(title)}
@@ -44,7 +44,7 @@ export function SectionHeading({
       >
         <path d="M2 12 Q60 -4 118 12 Q60 4 2 12 Z" fill="currentColor" />
       </svg>
-      {intro ? <div className="mt-5 text-lg text-ink-soft sm:text-xl">{intro}</div> : null}
+      {intro ? <div className="mt-4 text-lg text-ink-soft">{intro}</div> : null}
     </div>
   );
 }

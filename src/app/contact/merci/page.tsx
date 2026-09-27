@@ -19,7 +19,7 @@ export default function MerciPage() {
         intro={`Nous vous rappelons ${site.contact.callbackDelay}.`}
       />
       <Section labelledBy="suite" className="pt-6 sm:pt-8">
-        <h2 id="suite" className="text-2xl text-ink">
+        <h2 id="suite" className="text-xl text-ink">
           C&apos;est urgent ?
         </h2>
         <p className="mt-3 text-lg">Vous pouvez aussi nous appeler directement.</p>

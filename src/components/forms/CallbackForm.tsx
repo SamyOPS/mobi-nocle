@@ -105,7 +105,7 @@ export function CallbackForm() {
         <div className="flex items-start gap-4">
           <CheckIcon className="mt-1 size-8 shrink-0 text-primary" />
           <div>
-            <h2 className="text-2xl text-ink">Merci, votre demande est bien envoyée</h2>
+            <h2 className="text-xl text-ink">Merci, votre demande est bien envoyée</h2>
             <p className="mt-3 text-lg">
               Nous vous rappelons {site.contact.callbackDelay}. Si c&apos;est urgent, vous pouvez
               aussi nous appeler directement.

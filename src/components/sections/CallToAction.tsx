@@ -17,9 +17,9 @@ export function CallToAction({
   text = "Prenez rendez-vous en ligne en quelques minutes, ou appelez-nous : nous répondons à vos questions.",
 }: CallToActionProps) {
   return (
-    <section aria-labelledby="cta-titre" className="bg-white py-16 sm:py-20">
+    <section aria-labelledby="cta-titre" className="bg-white py-12 sm:py-16">
       <Container>
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-primary px-6 py-12 text-center text-white sm:px-12">
+        <div className="relative overflow-hidden rounded-[2.5rem] bg-primary px-6 py-10 text-center text-white sm:px-10">
           {/* Arc décoratif rappelant le logo */}
           <svg
             aria-hidden="true"
@@ -30,14 +30,14 @@ export function CallToAction({
             <path d="M0 40 Q200 -10 400 40 Z" fill="currentColor" />
           </svg>
           <div className="relative">
-            <h2 id="cta-titre" className="text-3xl sm:text-4xl">
+            <h2 id="cta-titre" className="text-2xl sm:text-3xl">
               {frTypo(title)}
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg sm:text-xl">{frTypo(text)}</p>
+            <p className="mx-auto mt-3 max-w-2xl text-lg">{frTypo(text)}</p>
             {isFilled(site.contact.openingHours[0]?.label) ? (
               <p className="mt-2">{site.contact.openingHours.map((h) => h.label).join(" · ")}</p>
             ) : null}
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <ButtonLink href={bookingNav.href} variant="light" size="lg">
                 {bookingNav.label}
               </ButtonLink>

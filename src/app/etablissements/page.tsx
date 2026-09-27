@@ -61,7 +61,7 @@ export default function EtablissementsPage() {
               <div className="flex items-start gap-4">
                 <CheckIcon className="mt-1 size-7 shrink-0 text-primary" />
                 <div>
-                  <h3 className="text-2xl text-ink">{item.title}</h3>
+                  <h3 className="text-xl text-ink">{item.title}</h3>
                   <p className="mt-2">{item.text}</p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function EtablissementsPage() {
 
       <Section labelledBy="contact-etablissement">
         <Card className="text-center">
-          <h2 id="contact-etablissement" className="text-3xl text-ink">
+          <h2 id="contact-etablissement" className="text-2xl text-ink">
             Parlons de votre établissement
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg">

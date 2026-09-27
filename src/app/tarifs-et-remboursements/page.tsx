@@ -33,7 +33,7 @@ export default function TarifsPage() {
         />
         <div className="grid gap-6 md:grid-cols-2">
           <Card as="article">
-            <h3 className="text-2xl text-ink">Offre 100 % Santé</h3>
+            <h3 className="text-xl text-ink">Offre 100 % Santé</h3>
             <p className="mt-3">
               Une sélection de montures et de verres entièrement remboursés : une partie par
               l&apos;Assurance maladie, le reste par votre mutuelle, si votre contrat est dit
@@ -41,7 +41,7 @@ export default function TarifsPage() {
             </p>
           </Card>
           <Card as="article">
-            <h3 className="text-2xl text-ink">Offre à tarifs libres</h3>
+            <h3 className="text-xl text-ink">Offre à tarifs libres</h3>
             <p className="mt-3">
               Vous pouvez aussi choisir une autre monture ou d&apos;autres verres. Le remboursement
               dépend alors de votre mutuelle, et une partie peut rester à votre charge.
@@ -59,7 +59,7 @@ export default function TarifsPage() {
         <SectionHeading id="pratique" title="En pratique" />
         <div className="grid gap-6 md:grid-cols-2">
           <Card as="article">
-            <h3 className="text-2xl text-ink">Tiers payant</h3>
+            <h3 className="text-xl text-ink">Tiers payant</h3>
             <p className="mt-3">{pricing.thirdPartyPayment}</p>
             <p className="mt-3">
               Avec le tiers payant, vous n&apos;avancez pas la part remboursée : nous nous faisons
@@ -67,12 +67,12 @@ export default function TarifsPage() {
             </p>
           </Card>
           <Card as="article">
-            <h3 className="text-2xl text-ink">Frais de déplacement</h3>
+            <h3 className="text-xl text-ink">Frais de déplacement</h3>
             <p className="mt-3 text-xl font-bold">{pricing.travelFees}</p>
             <p className="mt-3">{pricing.travelFeesConditions}</p>
           </Card>
           <Card as="article">
-            <h3 className="text-2xl text-ink">Mutuelles partenaires</h3>
+            <h3 className="text-xl text-ink">Mutuelles partenaires</h3>
             <div className="mt-3">
               <InfoList items={pricing.partnerInsurers} />
             </div>
@@ -81,7 +81,7 @@ export default function TarifsPage() {
             </p>
           </Card>
           <Card as="article">
-            <h3 className="text-2xl text-ink">Moyens de paiement</h3>
+            <h3 className="text-xl text-ink">Moyens de paiement</h3>
             <div className="mt-3">
               <InfoList items={pricing.paymentMethods} />
             </div>

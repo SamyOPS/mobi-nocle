@@ -211,7 +211,7 @@ function Wizard() {
       <BookingProgress current={step} />
 
       <form onSubmit={handleSubmit} noValidate aria-labelledby="etape-titre" className="space-y-8">
-        <h2 id="etape-titre" ref={headingRef} tabIndex={-1} className="text-3xl text-ink focus:outline-none sm:text-4xl">
+        <h2 id="etape-titre" ref={headingRef} tabIndex={-1} className="text-2xl text-ink focus:outline-none sm:text-3xl">
           {frTypo(steps[step].title)}
         </h2>
 
@@ -294,7 +294,7 @@ function Confirmation({ headingRef, draft, confirmation, onRestart }: Confirmati
         <div className="flex items-start gap-4">
           <CheckIcon className="mt-1 size-9 shrink-0 text-primary" />
           <div>
-            <h2 ref={headingRef} tabIndex={-1} className="text-3xl text-ink focus:outline-none">
+            <h2 ref={headingRef} tabIndex={-1} className="text-2xl text-ink focus:outline-none">
               {demo ? "Rendez-vous de démonstration terminé" : "Votre rendez-vous est enregistré"}
             </h2>
             <p className="mt-3 text-lg">

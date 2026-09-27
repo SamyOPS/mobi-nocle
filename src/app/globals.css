@@ -31,17 +31,21 @@
   --font-display: var(--font-nunito), ui-rounded, system-ui, sans-serif;
   --font-sans: var(--font-atkinson), system-ui, sans-serif;
 
+  /*
+   * Texte courant à 18px minimum : `text-base` vaut 1.125rem (18px) au lieu de 16px.
+   * La taille racine reste celle du navigateur, donc les espacements gardent
+   * des proportions normales et le zoom texte de l'utilisateur est respecté.
+   * Aucune taille inférieure (text-sm, text-xs) ne doit être utilisée.
+   */
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.65;
+
   --shadow-card: 0 1px 2px rgb(26 26 26 / 0.06), 0 4px 16px rgb(46 90 122 / 0.08);
   --shadow-card-hover: 0 2px 4px rgb(26 26 26 / 0.08), 0 8px 24px rgb(46 90 122 / 0.14);
 }
 
 @layer base {
-  /*
-   * La taille racine passe à 112.5 % : 1rem = 18px par défaut, tout en
-   * respectant la taille de police choisie par l'utilisateur dans son navigateur.
-   */
   html {
-    font-size: 112.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 8.5rem; /* hauteur du header collant */
     -webkit-text-size-adjust: 100%;
@@ -51,6 +55,7 @@
     background: var(--color-white);
     color: var(--color-ink);
     font-family: var(--font-sans);
+    font-size: var(--text-base); /* 18px */
     line-height: 1.65;
   }
 

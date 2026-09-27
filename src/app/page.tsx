@@ -25,18 +25,18 @@ export default function HomePage() {
   return (
     <>
       {/* Accroche */}
-      <section aria-labelledby="accroche" className="bg-lens-light pt-12 pb-8 sm:pt-16">
+      <section aria-labelledby="accroche" className="bg-lens-light pt-10 pb-6 sm:pt-12">
         <Container className="grid items-center gap-10 lg:grid-cols-[1.4fr_1fr]">
           <div className="min-w-0">
-            <h1 id="accroche" className="text-4xl text-ink sm:text-5xl lg:text-6xl">
+            <h1 id="accroche" className="text-3xl text-ink sm:text-4xl lg:text-5xl">
               Votre opticien se déplace chez vous
             </h1>
-            <p className="mt-6 max-w-2xl text-xl sm:text-2xl">
+            <p className="mt-5 max-w-2xl text-lg sm:text-xl">
               {frTypo(
                 "Contrôle de la vue, choix des lunettes, livraison et ajustage : tout se fait chez vous, à votre rythme. Pour vous, ou pour un proche.",
               )}
             </p>
-            <ul className="mt-6 space-y-2 text-lg">
+            <ul className="mt-5 space-y-1">
               {["À domicile ou en établissement", "Prise en charge par votre mutuelle selon votre contrat", "Un proche peut être présent"].map(
                 (item) => (
                   <li key={item} className="flex items-start gap-3">
@@ -46,7 +46,7 @@ export default function HomePage() {
                 ),
               )}
             </ul>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={bookingNav.href} size="lg">
                 {bookingNav.label}
               </ButtonLink>
@@ -57,7 +57,7 @@ export default function HomePage() {
                 Vous préférez qu&apos;on vous rappelle ?
               </Link>
             </p>
-            <p className="mt-6 flex items-start gap-3 text-lg">
+            <p className="mt-5 flex items-start gap-3">
               <MapPinIcon className="mt-1 size-6 shrink-0 text-primary" />
               <span>
                 <strong>Zone d&apos;intervention :</strong> {zone.summary}.{" "}
@@ -113,7 +113,7 @@ export default function HomePage() {
             <div className="flex justify-center">
               <CirclePhoto size="lg" label="Portrait de l'opticien" />
             </div>
-            <h3 className="mt-6 text-2xl text-ink">Votre opticien : {optician.name}</h3>
+            <h3 className="mt-6 text-xl text-ink">Votre opticien : {optician.name}</h3>
             <p className="mt-2 font-bold">{optician.diploma}</p>
             <p className="mt-3">{optician.bio}</p>
           </Card>
@@ -128,7 +128,7 @@ export default function HomePage() {
         <div className="grid gap-6 md:grid-cols-2">
           <Card as="article">
             <MapPinIcon className="size-10 text-primary" />
-            <h3 className="mt-4 text-2xl text-ink">Où intervenons-nous ?</h3>
+            <h3 className="mt-4 text-xl text-ink">Où intervenons-nous ?</h3>
             <p className="mt-3">{zone.summary}</p>
             <Link href="/zone-intervention" className={`${textLinkClass} mt-4`}>
               Voir toutes les communes
@@ -137,7 +137,7 @@ export default function HomePage() {
           </Card>
           <Card as="article">
             <BuildingIcon className="size-10 text-primary" />
-            <h3 className="mt-4 text-2xl text-ink">Vous êtes un établissement ?</h3>
+            <h3 className="mt-4 text-xl text-ink">Vous êtes un établissement ?</h3>
             <p className="mt-3">
               EHPAD, résidences seniors : nous organisons des visites pour vos résidents, en lien
               avec vos équipes et les familles.

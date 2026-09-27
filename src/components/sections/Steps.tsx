@@ -27,7 +27,7 @@ export function Steps({ variant = "summary", headingLevel: Heading = "h3" }: Ste
             <span aria-hidden="true">{index + 1}</span>
           </FramedCircle>
           <div>
-            <Heading className="text-2xl text-ink">
+            <Heading className="text-xl text-ink">
               <span className="sr-only">Étape {index + 1} : </span>
               {etape.title}
             </Heading>

@@ -31,7 +31,7 @@ export function Section({
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={cn("py-16 sm:py-20", toneClasses[tone], className)}
+      className={cn("py-12 sm:py-16", toneClasses[tone], className)}
     >
       <Container size={containerSize}>{children}</Container>
     </section>

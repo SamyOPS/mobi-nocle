@@ -53,7 +53,7 @@ src/
 ## Accessibilité
 
 Objectif WCAG 2.1 AA :
-- texte à 18 px minimum (taille racine à 112,5 %) ;
+- texte à 18 px minimum (`text-base` redéfini à 18 px dans `globals.css` ; ne jamais utiliser `text-sm` ni `text-xs`) ;
 - zones cliquables de 48 px minimum ;
 - focus toujours visible et lien d'évitement ;
 - aucune animation automatique, et `prefers-reduced-motion` respecté.

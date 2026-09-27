@@ -36,7 +36,7 @@ export default function ServicesPage() {
             >
               <div id={service.id} className={index % 2 === 1 ? "lg:order-2" : undefined}>
                 <IconBadge icon={service.icon} />
-                <h3 className="mt-5 text-3xl text-ink">{service.title}</h3>
+                <h3 className="mt-5 text-2xl text-ink">{service.title}</h3>
                 <p className="mt-3 text-lg">{service.summary}</p>
                 <ul className="mt-5 space-y-3">
                   {service.details.map((line) => (

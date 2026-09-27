@@ -18,7 +18,7 @@ export default function ErreurPage() {
         intro="Certaines informations semblent incomplètes ou incorrectes."
       />
       <Section labelledBy="que-faire" className="pt-6 sm:pt-8">
-        <h2 id="que-faire" className="text-2xl text-ink">
+        <h2 id="que-faire" className="text-xl text-ink">
           Que faire ?
         </h2>
         <p className="mt-3 text-lg">

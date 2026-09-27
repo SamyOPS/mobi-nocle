@@ -16,10 +16,10 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-white shadow-card">
         <Container className="flex items-center justify-between gap-4 py-2 sm:py-3">
           <Link href="/" className="shrink-0 rounded-xl">
-            <Logo eager className="w-36 sm:w-48 lg:w-52" />
+            <Logo eager className="w-36 sm:w-44 lg:w-48" />
           </Link>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="ml-auto hidden items-center gap-3 lg:flex">
             <PhoneLink variant="secondary" />
             <ButtonLink href={bookingNav.href}>{bookingNav.label}</ButtonLink>
           </div>
@@ -38,14 +38,14 @@ export function Header() {
       </header>
 
       {/* Navigation principale grand écran */}
-      <nav aria-label="Navigation principale" className="hidden border-b border-lens bg-white lg:block">
+      <nav aria-label="Navigation principale" className="hidden border-b border-lens bg-white xl:block">
         <Container>
           <ul className="flex flex-wrap items-center gap-x-1">
             {mainNav.map((item) => (
               <li key={item.href}>
                 <NavLink
                   href={item.href}
-                  className="flex min-h-12 items-center rounded-xl px-3 py-2 font-bold text-ink underline-offset-4 hover:text-primary hover:underline"
+                  className="flex min-h-12 items-center rounded-xl px-2 py-2 font-bold text-ink underline-offset-4 hover:text-primary hover:underline"
                   activeClassName="text-primary underline decoration-arc decoration-[3px]"
                 >
                   {item.label}

@@ -11,10 +11,10 @@ type PageHeaderProps = {
 export function PageHeader({ title, intro }: PageHeaderProps) {
   return (
     <>
-      <div className="bg-lens-light pt-12 pb-6 sm:pt-16">
+      <div className="bg-lens-light pt-10 pb-4 sm:pt-12">
         <Container>
-          <h1 className="max-w-4xl text-4xl text-ink sm:text-5xl">{frTypo(title)}</h1>
-          {intro ? <div className="mt-5 max-w-3xl text-xl sm:text-2xl">{intro}</div> : null}
+          <h1 className="max-w-4xl text-3xl text-ink sm:text-4xl">{frTypo(title)}</h1>
+          {intro ? <div className="mt-4 max-w-3xl text-lg sm:text-xl">{intro}</div> : null}
         </Container>
       </div>
       <ArcDivider from="lens-light" to="white" />

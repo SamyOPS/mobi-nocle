@@ -17,7 +17,7 @@ export default function NotFound() {
         intro="L'adresse est peut-être incorrecte, ou la page a été déplacée."
       />
       <Section labelledBy="suite-404" className="pt-6 sm:pt-8">
-        <h2 id="suite-404" className="text-2xl text-ink">
+        <h2 id="suite-404" className="text-xl text-ink">
           Que souhaitez-vous faire ?
         </h2>
         <div className="mt-6 flex flex-col gap-4 sm:flex-row">

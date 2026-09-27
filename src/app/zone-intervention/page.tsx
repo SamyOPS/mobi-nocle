@@ -45,7 +45,7 @@ export default function ZonePage() {
         )}
 
         <Card as="article" className="mt-12 bg-lens-light">
-          <h3 className="text-2xl text-ink">Votre commune n&apos;est pas dans la liste ?</h3>
+          <h3 className="text-xl text-ink">Votre commune n&apos;est pas dans la liste ?</h3>
           <p className="mt-3">
             Appelez-nous quand même : selon les rendez-vous prévus, nous pouvons parfois nous
             déplacer un peu plus loin.

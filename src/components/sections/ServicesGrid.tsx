@@ -10,7 +10,7 @@ export function ServicesGrid() {
       {services.map((service) => (
         <Card as="li" key={service.id} className="flex flex-col">
           <IconBadge icon={service.icon} />
-          <h3 className="mt-5 text-2xl text-ink">{service.title}</h3>
+          <h3 className="mt-5 text-xl text-ink">{service.title}</h3>
           <p className="mt-3 flex-1">{service.summary}</p>
           <Link
             href={`/services#${service.id}`}

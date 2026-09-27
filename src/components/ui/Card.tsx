@@ -10,7 +10,7 @@ export function Card({ children, className, as: Tag = "div" }: CardProps) {
   return (
     <Tag
       className={cn(
-        "rounded-3xl border border-lens bg-white p-6 shadow-card sm:p-8",
+        "rounded-3xl border border-lens bg-white p-5 shadow-card sm:p-6",
         className,
       )}
     >
