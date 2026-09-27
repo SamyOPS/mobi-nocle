@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible, Nunito } from "next/font/google";
 import { getSiteUrl, site } from "@/config/site";
+import { opticianJsonLd } from "@/lib/json-ld";
 import { defaultOgImage } from "@/lib/metadata";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SkipLink } from "@/components/layout/SkipLink";
@@ -45,6 +47,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${nunito.variable} ${atkinson.variable}`}>
       <body className="flex min-h-screen flex-col antialiased">
+        <JsonLd data={opticianJsonLd()} />
         <SkipLink />
         <Header />
         <main id="contenu" tabIndex={-1} className="flex-1 focus:shadow-none focus:outline-none">
