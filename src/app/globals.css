@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/*
+ * Tokens de l'identité Mobi'Nocle.
+ * Contrastes calculés (WCAG 2.1, seuil AA texte courant = 4.5:1) :
+ *   ink sur blanc ............ 17.40:1
+ *   ink sur lens-light ....... 15.66:1
+ *   ink sur lens ............. 11.79:1
+ *   ink-soft sur blanc ....... 10.86:1
+ *   ink-soft sur lens-light ..  9.77:1
+ *   primary sur blanc ........  7.34:1
+ *   primary sur lens-light ...  6.61:1
+ *   primary sur lens .........  4.97:1
+ *   blanc sur primary ........  7.34:1
+ *   blanc sur primary-dark ... 10.72:1
+ *   error sur blanc ..........  7.75:1
+ *   arc sur blanc ............  3.14:1  -> décoratif ou très grands titres uniquement
+ *   arc sur lens-light .......  2.83:1  -> décoratif uniquement, jamais de texte
+ */
+@theme {
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #3d3d3d;
+  --color-lens: #a8dcf5;
+  --color-lens-light: #e8f5fc;
+  --color-arc: #6f96b3;
+  --color-primary: #2e5a7a;
+  --color-primary-dark: #1f4159;
+  --color-white: #ffffff;
+  --color-error: #a4161a;
+
+  --font-display: var(--font-nunito), ui-rounded, system-ui, sans-serif;
+  --font-sans: var(--font-atkinson), system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(26 26 26 / 0.06), 0 4px 16px rgb(46 90 122 / 0.08);
+  --shadow-card-hover: 0 2px 4px rgb(26 26 26 / 0.08), 0 8px 24px rgb(46 90 122 / 0.14);
+}
+
+/*
+ * La taille racine passe à 112.5 % : 1rem = 18px par défaut, tout en
+ * respectant la taille de police choisie par l'utilisateur dans son navigateur.
+ */
+html {
+  font-size: 112.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+/* Focus toujours très visible, quel que soit le fond. */
+:focus-visible {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px var(--color-lens);
+  border-radius: 0.375rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
