@@ -20,6 +20,13 @@ export const faq: FaqItem[] = [
     ],
   },
   {
+    question: "Comment prendre rendez-vous ?",
+    answer: [
+      "Vous pouvez prendre rendez-vous en ligne : vous choisissez le jour et une plage horaire de deux heures pendant laquelle l'opticien passera. Vous pouvez aussi nous appeler, ou nous laisser votre numéro pour que nous vous rappelions.",
+    ],
+    link: { href: "/rendez-vous", label: "Prendre rendez-vous en ligne" },
+  },
+  {
     question: "Un proche peut-il prendre rendez-vous pour moi ?",
     answer: [
       "Oui, bien sûr. Un enfant, un voisin, un aidant ou le personnel de votre résidence peut nous appeler ou remplir la demande de rappel pour vous. Il peut aussi être présent pendant la visite.",

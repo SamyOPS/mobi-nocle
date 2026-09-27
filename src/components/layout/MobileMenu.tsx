@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { contactNav, mainNav } from "@/config/navigation";
+import { bookingNav, contactNav, mainNav } from "@/config/navigation";
+import { buttonClasses } from "@/components/ui/Button";
 import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 import { NavLink } from "./NavLink";
 
@@ -49,6 +50,15 @@ export function MobileMenu() {
         className="absolute inset-x-0 top-full max-h-[calc(100dvh-8rem)] overflow-y-auto border-t-4 border-arc bg-white shadow-card-hover"
       >
         <ul className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
+          <li className="mb-3">
+            <NavLink
+              href={bookingNav.href}
+              onClick={close}
+              className={buttonClasses({ size: "lg", className: "w-full" })}
+            >
+              {bookingNav.label}
+            </NavLink>
+          </li>
           {[...mainNav, contactNav].map((item) => (
             <li key={item.href}>
               <NavLink

@@ -1,5 +1,6 @@
 import { frTypo } from "@/lib/typo";
-import { contactNav } from "@/config/navigation";
+import Link from "next/link";
+import { bookingNav, contactNav } from "@/config/navigation";
 import { isFilled, site } from "@/config/site";
 import { ButtonLink } from "@/components/ui/Button";
 import { PhoneLink } from "@/components/ui/PhoneLink";
@@ -13,7 +14,7 @@ type CallToActionProps = {
 /** Bandeau d'appel à l'action : téléphone et demande de rappel. */
 export function CallToAction({
   title = "Une question ? Parlons-en",
-  text = "Appelez-nous, ou laissez-nous votre numéro : nous vous rappelons pour répondre à vos questions et convenir d'un rendez-vous.",
+  text = "Prenez rendez-vous en ligne en quelques minutes, ou appelez-nous : nous répondons à vos questions.",
 }: CallToActionProps) {
   return (
     <section aria-labelledby="cta-titre" className="bg-white py-16 sm:py-20">
@@ -37,11 +38,16 @@ export function CallToAction({
               <p className="mt-2">{site.contact.openingHours.map((h) => h.label).join(" · ")}</p>
             ) : null}
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <PhoneLink variant="light" size="lg" />
-              <ButtonLink href={contactNav.href} variant="light" size="lg">
-                Demander à être rappelé
+              <ButtonLink href={bookingNav.href} variant="light" size="lg">
+                {bookingNav.label}
               </ButtonLink>
+              <PhoneLink variant="outline-light" size="lg" />
             </div>
+            <p className="mt-4">
+              <Link href={contactNav.href} className="inline-flex min-h-12 items-center font-bold underline underline-offset-4 text-white">
+                Vous préférez qu&apos;on vous rappelle ?
+              </Link>
+            </p>
           </div>
         </div>
       </Container>

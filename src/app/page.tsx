@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { contactNav } from "@/config/navigation";
+import { bookingNav, contactNav } from "@/config/navigation";
 import { site } from "@/config/site";
+import { frTypo } from "@/lib/typo";
 import { ArcDivider } from "@/components/ui/ArcDivider";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
@@ -31,8 +32,9 @@ export default function HomePage() {
               Votre opticien se déplace chez vous
             </h1>
             <p className="mt-6 max-w-2xl text-xl sm:text-2xl">
-              Contrôle de la vue, choix des lunettes, livraison et ajustage : tout se fait chez
-              vous, à votre rythme. Pour vous, ou pour un proche.
+              {frTypo(
+                "Contrôle de la vue, choix des lunettes, livraison et ajustage : tout se fait chez vous, à votre rythme. Pour vous, ou pour un proche.",
+              )}
             </p>
             <ul className="mt-6 space-y-2 text-lg">
               {["À domicile ou en établissement", "Prise en charge par votre mutuelle selon votre contrat", "Un proche peut être présent"].map(
@@ -45,11 +47,16 @@ export default function HomePage() {
               )}
             </ul>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <PhoneLink size="lg" prefix="Appeler le" />
-              <ButtonLink href={contactNav.href} variant="secondary" size="lg">
-                Être rappelé
+              <ButtonLink href={bookingNav.href} size="lg">
+                {bookingNav.label}
               </ButtonLink>
+              <PhoneLink size="lg" variant="secondary" prefix="Appeler le" />
             </div>
+            <p className="mt-3">
+              <Link href={contactNav.href} className="inline-flex min-h-12 items-center font-bold underline underline-offset-4 text-primary hover:text-primary-dark">
+                Vous préférez qu&apos;on vous rappelle ?
+              </Link>
+            </p>
             <p className="mt-6 flex items-start gap-3 text-lg">
               <MapPinIcon className="mt-1 size-6 shrink-0 text-primary" />
               <span>

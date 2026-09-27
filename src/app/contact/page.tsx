@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site } from "@/config/site";
 import { pageMetadata } from "@/lib/metadata";
 import { Card } from "@/components/ui/Card";
@@ -19,7 +20,16 @@ export default function ContactPage() {
     <>
       <PageHeader
         title="Contact"
-        intro="Appelez-nous directement, ou laissez-nous votre numéro : nous vous rappelons. Vous pouvez aussi faire la demande pour un proche."
+        intro={
+          <p>
+            Appelez-nous directement, ou laissez-nous votre numéro : nous vous rappelons. Vous pouvez
+            aussi{" "}
+            <Link href="/rendez-vous" className="font-bold text-primary underline underline-offset-4">
+              prendre rendez-vous en ligne
+            </Link>
+            .
+          </p>
+        }
       />
       <Section labelledBy="contact-telephone" className="pt-6 sm:pt-8">
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_1.4fr]">

@@ -11,12 +11,12 @@ export type Etape = {
 
 export const etapes: Etape[] = [
   {
-    title: "Vous nous appelez",
+    title: "Vous prenez rendez-vous",
     summary:
-      "Vous nous appelez, ou un proche le fait pour vous. Nous convenons ensemble d'un rendez-vous chez vous.",
+      "En ligne ou par téléphone, vous ou un proche choisissez le jour et la plage horaire de la visite.",
     details: [
-      "Vous pouvez nous appeler directement ou nous laisser vos coordonnées pour que nous vous rappelions.",
-      "Nous prenons le temps de comprendre votre besoin et nous fixons un rendez-vous au moment qui vous convient.",
+      "Vous pouvez prendre rendez-vous en ligne, nous appeler, ou nous laisser vos coordonnées pour que nous vous rappelions.",
+      "Vous choisissez le jour et la plage horaire qui vous conviennent. Au téléphone, nous prenons le temps de comprendre votre besoin.",
       "Un proche, un aidant ou le personnel de votre résidence peut faire cette démarche pour vous.",
     ],
   },

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "secondary" | "light";
+type Variant = "primary" | "secondary" | "light" | "outline-light";
 type Size = "md" | "lg";
 
 const base =
@@ -15,6 +15,8 @@ const variants: Record<Variant, string> = {
     "border-[3px] border-primary bg-white text-primary hover:bg-lens-light hover:text-primary-dark",
   // Pour les fonds foncés (primary) : ink sur blanc
   light: "bg-white text-ink hover:bg-lens-light",
+  // Pour les fonds foncés : blanc sur primary 7.34:1
+  "outline-light": "border-[3px] border-white bg-transparent text-white hover:bg-primary-dark",
 };
 
 const sizes: Record<Size, string> = {

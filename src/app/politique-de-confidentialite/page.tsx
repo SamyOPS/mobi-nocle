@@ -21,7 +21,7 @@ export default function ConfidentialitePage() {
     <>
       <PageHeader
         title="Politique de confidentialité"
-        intro="Nous utilisons vos informations uniquement pour vous rappeler. Voici, simplement, ce que cela veut dire."
+        intro="Nous utilisons vos informations uniquement pour vous rappeler ou organiser votre rendez-vous. Voici, simplement, ce que cela veut dire."
       />
       <Section labelledBy="responsable" className="pt-6 sm:pt-8">
         <Prose>
@@ -40,15 +40,31 @@ export default function ConfidentialitePage() {
             <li>si la demande est pour vous ou pour un proche ;</li>
             <li>le message que vous choisissez d&apos;écrire, le cas échéant.</li>
           </ul>
+          <p>Lorsque vous prenez rendez-vous en ligne :</p>
+          <ul>
+            <li>si le rendez-vous est pour vous ou pour un proche, et son motif ;</li>
+            <li>l&apos;adresse où l&apos;opticien doit se rendre (y compris étage ou digicode si vous les indiquez) ;</li>
+            <li>le jour et la plage horaire choisis ;</li>
+            <li>le nom et le téléphone de la personne qui recevra l&apos;opticien ;</li>
+            <li>si c&apos;est pour un proche : votre nom et votre téléphone ;</li>
+            <li>votre adresse e-mail, si vous choisissez de la donner ;</li>
+            <li>le message que vous choisissez d&apos;écrire, le cas échéant.</li>
+          </ul>
           <p>
-            Nous ne vous demandons aucune information sur votre santé par ce formulaire. Merci de ne
-            pas en indiquer dans le message : nous en parlerons de vive voix si nécessaire.
+            Nous ne vous demandons aucune information sur votre santé par ces formulaires. Merci de
+            ne pas en indiquer dans les messages : nous en parlerons de vive voix si nécessaire.
+          </p>
+          <p>
+            Pendant la prise de rendez-vous, votre saisie est gardée temporairement dans votre
+            navigateur, pour ne pas être perdue si la page se recharge. Elle est effacée à la
+            fermeture de l&apos;onglet ou une fois le rendez-vous confirmé.
           </p>
 
           <h2>Pourquoi ?</h2>
           <p>
-            Uniquement pour vous rappeler et répondre à votre demande. Vos informations ne sont
-            jamais vendues ni utilisées pour de la publicité.
+            Uniquement pour vous rappeler, organiser et assurer votre rendez-vous (venir à la bonne
+            adresse, vous prévenir d&apos;un changement). Vos informations ne sont jamais vendues ni
+            utilisées pour de la publicité.
           </p>
           <p>
             Base légale : votre consentement, que vous donnez en cochant la case prévue. Vous pouvez
@@ -58,7 +74,7 @@ export default function ConfidentialitePage() {
           <h2>Qui peut les voir ?</h2>
           <p>
             Seul {site.name} a accès à vos informations. Nos prestataires techniques (hébergement du
-            site : {legal.host.name} ; service d&apos;envoi des demandes : {A_COMPLETER}) les
+            site : {legal.host.name} ; service d&apos;envoi des demandes et de gestion des rendez-vous : {A_COMPLETER}) les
             traitent pour notre compte, sans pouvoir les utiliser pour eux-mêmes.
           </p>
           <p>Lieu d&apos;hébergement des données et garanties éventuelles : {A_COMPLETER}.</p>

@@ -15,6 +15,9 @@ export const mainNav: NavItem[] = [
 
 export const contactNav: NavItem = { href: "/contact", label: "Être rappelé" };
 
+/** Action principale du site. */
+export const bookingNav: NavItem = { href: "/rendez-vous", label: "Prendre rendez-vous" };
+
 export const legalNav: NavItem[] = [
   { href: "/mentions-legales", label: "Mentions légales" },
   { href: "/politique-de-confidentialite", label: "Politique de confidentialité" },
@@ -24,6 +27,7 @@ export const legalNav: NavItem[] = [
 export const allRoutes: string[] = [
   "/",
   ...mainNav.map((item) => item.href),
+  "/rendez-vous",
   "/contact",
   ...legalNav.map((item) => item.href),
 ];

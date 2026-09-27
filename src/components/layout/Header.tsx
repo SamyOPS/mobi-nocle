@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { contactNav, mainNav } from "@/config/navigation";
+import { bookingNav, mainNav } from "@/config/navigation";
 import { site, telHref } from "@/config/site";
 import { Logo } from "@/components/brand/Logo";
 import { ButtonLink } from "@/components/ui/Button";
@@ -20,10 +20,8 @@ export function Header() {
           </Link>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <PhoneLink variant="primary" />
-            <ButtonLink href={contactNav.href} variant="secondary">
-              {contactNav.label}
-            </ButtonLink>
+            <PhoneLink variant="secondary" />
+            <ButtonLink href={bookingNav.href}>{bookingNav.label}</ButtonLink>
           </div>
 
           <MobileMenu />

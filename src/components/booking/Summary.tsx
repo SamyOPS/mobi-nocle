@@ -1,5 +1,6 @@
 import { getVisitType } from "@/content/rendez-vous";
 import { capitalize, formatLongDay, formatWindow } from "@/lib/booking";
+import { cn } from "@/lib/cn";
 import type { BookingDraft, StepIndex } from "./draft";
 
 type SummaryProps = {
@@ -61,23 +62,24 @@ export function Summary({ draft, onEdit }: SummaryProps) {
   return (
     <dl className="divide-y-2 divide-lens overflow-hidden rounded-3xl border-2 border-lens bg-white">
       {blocks(draft).map((block) => (
-        <div key={block.title} className="flex flex-col gap-3 p-5 sm:flex-row sm:items-start sm:justify-between sm:p-6">
-          <div>
-            <dt className="font-display text-xl font-extrabold">{block.title}</dt>
-            {block.lines.map((line) => (
-              <dd key={line} className="mt-1 text-lg break-words">
-                {line}
-              </dd>
-            ))}
-          </div>
+        // dt et dd directement dans le groupe (structure attendue d'une liste de définitions)
+        <div key={block.title} className={cn("relative p-5 sm:p-6", onEdit && "sm:pr-36")}>
+          <dt className="font-display text-xl font-extrabold">{block.title}</dt>
+          {block.lines.map((line) => (
+            <dd key={line} className="mt-1 text-lg break-words">
+              {line}
+            </dd>
+          ))}
           {onEdit ? (
-            <button
-              type="button"
-              onClick={() => onEdit(block.step)}
-              className="inline-flex min-h-12 shrink-0 items-center self-start rounded-full px-2 font-bold text-primary underline underline-offset-4 hover:text-primary-dark"
-            >
-              Modifier<span className="sr-only"> : {block.title.toLowerCase()}</span>
-            </button>
+            <dd className="mt-2 sm:absolute sm:top-4 sm:right-4 sm:mt-0">
+              <button
+                type="button"
+                onClick={() => onEdit(block.step)}
+                className="inline-flex min-h-12 items-center rounded-full px-2 font-bold text-primary underline underline-offset-4 hover:text-primary-dark"
+              >
+                Modifier<span className="sr-only"> : {block.title.toLowerCase()}</span>
+              </button>
+            </dd>
           ) : null}
         </div>
       ))}

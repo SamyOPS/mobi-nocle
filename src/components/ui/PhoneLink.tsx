@@ -3,7 +3,7 @@ import { buttonClasses } from "./Button";
 import { PhoneIcon } from "./icons";
 
 type PhoneLinkProps = {
-  variant?: "primary" | "secondary" | "light";
+  variant?: "primary" | "secondary" | "light" | "outline-light";
   size?: "md" | "lg";
   className?: string;
   /** Texte visible avant le numéro, ex. « Appelez le » */

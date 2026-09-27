@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { contactNav, legalNav, mainNav } from "@/config/navigation";
+import { bookingNav, contactNav, legalNav, mainNav } from "@/config/navigation";
 import { isFilled, site } from "@/config/site";
 import { Logo } from "@/components/brand/Logo";
 import { Container } from "@/components/ui/Container";
@@ -28,6 +28,9 @@ export function Footer() {
               <h2 className="text-xl text-ink">Nous contacter</h2>
               <div className="mt-4 flex flex-col items-start gap-3">
                 <PhoneLink />
+                <Link href={bookingNav.href} className={linkClass}>
+                  Prendre rendez-vous en ligne
+                </Link>
                 <Link href={contactNav.href} className={linkClass}>
                   Demander à être rappelé
                 </Link>
@@ -65,7 +68,7 @@ export function Footer() {
             <nav aria-label="Plan du site">
               <h2 className="text-xl text-ink">Plan du site</h2>
               <ul className="mt-2">
-                {[{ href: "/", label: "Accueil" }, ...mainNav, contactNav].map((item) => (
+                {[{ href: "/", label: "Accueil" }, ...mainNav, bookingNav, contactNav].map((item) => (
                   <li key={item.href}>
                     <Link href={item.href} className={linkClass}>
                       {item.label}
