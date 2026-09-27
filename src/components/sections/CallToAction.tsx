@@ -1,3 +1,4 @@
+import { frTypo } from "@/lib/typo";
 import { contactNav } from "@/config/navigation";
 import { isFilled, site } from "@/config/site";
 import { ButtonLink } from "@/components/ui/Button";
@@ -29,9 +30,9 @@ export function CallToAction({
           </svg>
           <div className="relative">
             <h2 id="cta-titre" className="text-3xl sm:text-4xl">
-              {title}
+              {frTypo(title)}
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg sm:text-xl">{text}</p>
+            <p className="mx-auto mt-4 max-w-2xl text-lg sm:text-xl">{frTypo(text)}</p>
             {isFilled(site.contact.openingHours[0]?.label) ? (
               <p className="mt-2">{site.contact.openingHours.map((h) => h.label).join(" · ")}</p>
             ) : null}

@@ -1,3 +1,4 @@
+import { frTypo } from "@/lib/typo";
 import { cn } from "@/lib/cn";
 
 type SectionHeadingProps = {
@@ -33,7 +34,7 @@ export function SectionHeading({
           Tag === "h1" ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl",
         )}
       >
-        {title}
+        {frTypo(title)}
       </Tag>
       {/* Petit arc rappelant celui du logo, purement décoratif */}
       <svg

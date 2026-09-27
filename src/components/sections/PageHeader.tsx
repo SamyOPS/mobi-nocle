@@ -1,3 +1,4 @@
+import { frTypo } from "@/lib/typo";
 import { ArcDivider } from "@/components/ui/ArcDivider";
 import { Container } from "@/components/ui/Container";
 
@@ -12,7 +13,7 @@ export function PageHeader({ title, intro }: PageHeaderProps) {
     <>
       <div className="bg-lens-light pt-12 pb-6 sm:pt-16">
         <Container>
-          <h1 className="max-w-4xl text-4xl text-ink sm:text-5xl">{title}</h1>
+          <h1 className="max-w-4xl text-4xl text-ink sm:text-5xl">{frTypo(title)}</h1>
           {intro ? <div className="mt-5 max-w-3xl text-xl sm:text-2xl">{intro}</div> : null}
         </Container>
       </div>
