@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Atkinson_Hyperlegible, Nunito } from "next/font/google";
+import { getSiteUrl, site } from "@/config/site";
+import { defaultOgImage } from "@/lib/metadata";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -17,7 +19,23 @@ const atkinson = Atkinson_Hyperlegible({
 });
 
 export const metadata: Metadata = {
-  title: "Mobi'Nocle",
+  metadataBase: new URL(getSiteUrl()),
+  title: {
+    template: `%s | ${site.name}`,
+    default: `${site.name}, ${site.tagline.toLowerCase()}`,
+  },
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: site.name,
+    title: `${site.name}, ${site.tagline.toLowerCase()}`,
+    description: site.description,
+    url: "/",
+    images: [defaultOgImage],
+  },
+  formatDetection: { telephone: false },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
