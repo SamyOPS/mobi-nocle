@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/config/site";
+import { photos } from "@/content/photos";
 import { pageMetadata } from "@/lib/metadata";
 import { Prose } from "@/components/ui/Prose";
 import { Section } from "@/components/ui/Section";
@@ -70,6 +71,21 @@ export default function MentionsLegalesPage() {
             {site.name}, sauf mention contraire. Toute reproduction sans autorisation est
             interdite.
           </p>
+
+          <h2>Crédits photos</h2>
+          <p>
+            Les photos d&apos;illustration proviennent d&apos;
+            <a href="https://unsplash.com">Unsplash</a> et sont utilisées selon la licence
+            Unsplash. Elles ne représentent ni {site.name}, ni son opticien, ni ses clients.
+          </p>
+          <ul>
+            {Object.values(photos).map((photo) => (
+              <li key={photo.src}>
+                {photo.alt} : photo de <a href={photo.credit.authorUrl}>{photo.credit.author}</a>{" "}
+                (<a href={photo.credit.photoUrl}>voir sur Unsplash</a>)
+              </li>
+            ))}
+          </ul>
 
           <h2>Données personnelles</h2>
           <p>

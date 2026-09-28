@@ -24,6 +24,7 @@ npm run build
 | Prise de rendez-vous : plages, jours, délai, mode démo | `site.booking` dans `src/config/site.ts` |
 | Prise de rendez-vous : branchement de la vraie API | `src/lib/booking/index.ts` (voir le `TODO(api-rdv)`), contrat dans `src/lib/booking/types.ts` |
 | Types de visite proposés | `src/content/rendez-vous.ts` |
+| Photos d'illustration (Unsplash) et leurs crédits | `src/content/photos.ts`, fichiers dans `public/images/photos/` |
 
 Toute valeur encore inconnue vaut `A_COMPLETER` et s'affiche « À COMPLÉTER » sur le site. Pour tout retrouver :
 

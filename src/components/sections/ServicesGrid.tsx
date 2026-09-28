@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { services } from "@/content/services";
+import { servicePhotos } from "@/content/photos";
+import { PhotoImage } from "@/components/ui/PhotoImage";
 import { Card } from "@/components/ui/Card";
 import { ArrowRightIcon } from "@/components/ui/icons";
 import { IconBadge } from "./serviceIcons";
@@ -9,6 +11,11 @@ export function ServicesGrid() {
     <ul className="grid gap-6 md:grid-cols-3">
       {services.map((service) => (
         <Card as="li" key={service.id} className="flex flex-col">
+          <PhotoImage
+            photo={servicePhotos[service.id]}
+            sizes="(min-width: 768px) 33vw, 100vw"
+            className="mb-5 aspect-[4/3] rounded-2xl"
+          />
           <IconBadge icon={service.icon} />
           <h3 className="mt-5 text-xl text-ink">{service.title}</h3>
           <p className="mt-3 flex-1">{service.summary}</p>

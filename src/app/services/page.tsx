@@ -1,7 +1,8 @@
 import { services } from "@/content/services";
 import { pageMetadata } from "@/lib/metadata";
 import { Card } from "@/components/ui/Card";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { PhotoImage } from "@/components/ui/PhotoImage";
+import { servicePhotos } from "@/content/photos";
 import { Section } from "@/components/ui/Section";
 import { CheckIcon } from "@/components/ui/icons";
 import { CallToAction } from "@/components/sections/CallToAction";
@@ -47,7 +48,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
               </div>
-              <ImagePlaceholder label={`Illustration : ${service.title.toLowerCase()}`} width={800} height={600} />
+              <PhotoImage photo={servicePhotos[service.id]} className="aspect-[4/3]" />
             </Card>
           ))}
         </div>

@@ -12,6 +12,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ArrowRightIcon, BuildingIcon, CheckIcon, MapPinIcon } from "@/components/ui/icons";
 import { CallToAction } from "@/components/sections/CallToAction";
 import { CirclePhoto } from "@/components/sections/CirclePhoto";
+import { photos } from "@/content/photos";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { Steps } from "@/components/sections/Steps";
 import { TrustPoints } from "@/components/sections/TrustPoints";
@@ -68,7 +69,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <CirclePhoto label="L'opticien lors d'une visite à domicile" />
+            <CirclePhoto label="L'opticien lors d'une visite à domicile" photo={photos.visiteDomicile} eager />
           </div>
         </Container>
       </section>

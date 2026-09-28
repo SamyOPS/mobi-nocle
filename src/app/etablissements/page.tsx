@@ -3,7 +3,8 @@ import { pageMetadata } from "@/lib/metadata";
 import { ButtonLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { FramedCircle } from "@/components/ui/FramedCircle";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { PhotoImage } from "@/components/ui/PhotoImage";
+import { photos } from "@/content/photos";
 import { PhoneLink } from "@/components/ui/PhoneLink";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -88,7 +89,7 @@ export default function EtablissementsPage() {
               ))}
             </ol>
           </div>
-          <ImagePlaceholder label="Visite de l'opticien dans un établissement" width={800} height={600} />
+          <PhotoImage photo={photos.etablissement} className="aspect-[4/3]" />
         </div>
       </Section>
 
