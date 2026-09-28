@@ -17,7 +17,7 @@ export function ImagePlaceholder({ label, width, height, className }: ImagePlace
     <div
       style={{ aspectRatio: `${width} / ${height}` }}
       className={cn(
-        "flex w-full items-center justify-center rounded-3xl border-[3px] border-dashed border-arc bg-lens-light p-6 text-center",
+        "flex w-full items-center justify-center rounded-3xl border-2 border-dashed border-arc bg-lens-light p-6 text-center",
         className,
       )}
     >

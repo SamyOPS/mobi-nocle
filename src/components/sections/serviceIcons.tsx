@@ -24,7 +24,7 @@ export const contentIcons: Record<ServiceIcon | TrustIcon, (props: { className?:
 export function IconBadge({ icon }: { icon: ServiceIcon | TrustIcon }) {
   const Icon = contentIcons[icon];
   return (
-    <span className="inline-flex size-14 items-center justify-center rounded-full border-4 border-ink bg-lens-light text-primary">
+    <span className="inline-flex size-14 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-lens-light text-primary">
       <Icon className="size-7" />
     </span>
   );

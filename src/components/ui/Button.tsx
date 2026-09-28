@@ -12,11 +12,11 @@ const variants: Record<Variant, string> = {
   primary: "bg-primary text-white hover:bg-primary-dark",
   // primary sur blanc : 7.34:1 ; bordure primary (contraste non textuel > 3:1)
   secondary:
-    "border-[3px] border-primary bg-white text-primary hover:bg-lens-light hover:text-primary-dark",
+    "border-2 border-primary bg-white text-primary hover:bg-lens-light hover:text-primary-dark",
   // Pour les fonds foncés (primary) : ink sur blanc
   light: "bg-white text-ink hover:bg-lens-light",
   // Pour les fonds foncés : blanc sur primary 7.34:1
-  "outline-light": "border-[3px] border-white bg-transparent text-white hover:bg-primary-dark",
+  "outline-light": "border-2 border-white bg-transparent text-white hover:bg-primary-dark",
 };
 
 const sizes: Record<Size, string> = {

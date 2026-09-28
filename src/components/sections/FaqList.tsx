@@ -20,7 +20,7 @@ export function FaqList({ items }: { items: FaqItem[] }) {
             {/* Indicateur visuel ouvert / fermé, en forme de verre */}
             <span
               aria-hidden="true"
-              className="relative flex size-9 shrink-0 items-center justify-center rounded-full border-4 border-ink bg-lens-light"
+              className="relative flex size-9 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-lens-light"
             >
               <span className="absolute h-1 w-4 rounded bg-ink" />
               <span className="absolute h-4 w-1 rounded bg-ink group-open:hidden" />

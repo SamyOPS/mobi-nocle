@@ -104,7 +104,7 @@ export function StepAddress({ draft, update, errors }: StepProps) {
         />
       </div>
       {outsideZone ? (
-        <div role="status" className="rounded-2xl border-4 border-arc bg-lens-light p-5">
+        <div role="status" className="rounded-2xl border-2 border-arc bg-lens-light p-5">
           <p className="font-bold">Cette commune ne fait pas partie de notre zone habituelle.</p>
           <p className="mt-1">
             Vous pouvez continuer, ou nous appeler pour vérifier que nous pouvons nous déplacer.

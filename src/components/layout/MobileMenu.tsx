@@ -37,7 +37,7 @@ export function MobileMenu() {
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex min-h-12 min-w-12 items-center gap-2 rounded-full border-[3px] border-ink bg-white px-4 font-display text-lg font-extrabold text-ink hover:bg-lens-light"
+        className="inline-flex min-h-12 min-w-12 items-center gap-2 rounded-full border-2 border-ink bg-white px-4 font-display text-lg font-extrabold text-ink hover:bg-lens-light"
       >
         {open ? <CloseIcon /> : <MenuIcon />}
         <span>{open ? "Fermer" : "Menu"}</span>

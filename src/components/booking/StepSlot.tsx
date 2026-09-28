@@ -129,7 +129,7 @@ export function StepSlot({ draft, update, errors }: StepProps) {
 
   if (loaded?.status === "error") {
     return (
-      <div className="rounded-3xl border-4 border-error bg-white p-6">
+      <div className="rounded-3xl border-2 border-error bg-white p-6">
         <p className="font-bold">Les disponibilités n&apos;ont pas pu être chargées.</p>
         <p className="mt-2">Réessayez dans un instant, ou appelez-nous pour prendre rendez-vous.</p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row">
@@ -217,7 +217,7 @@ export function StepSlot({ draft, update, errors }: StepProps) {
                           className={cn(
                             "flex min-h-12 w-full items-center justify-center gap-1 rounded-xl border-2 px-1 py-2 text-base font-bold leading-tight sm:text-lg",
                             selected
-                              ? "border-primary bg-primary text-white ring-[3px] ring-ink ring-offset-2"
+                              ? "border-primary bg-primary text-white ring-2 ring-ink ring-offset-2"
                               : "border-primary bg-lens-light text-primary hover:bg-lens",
                           )}
                         >
@@ -264,7 +264,7 @@ export function StepSlot({ draft, update, errors }: StepProps) {
       {/* Créneau choisi */}
       <div aria-live="polite">
         {draft.slot ? (
-          <p className="flex items-start gap-3 rounded-2xl border-4 border-primary bg-lens-light p-4 text-lg">
+          <p className="flex items-start gap-3 rounded-2xl border-2 border-primary bg-lens-light p-4 text-lg">
             <CheckIcon className="mt-1 size-6 shrink-0 text-primary" />
             <span>
               <strong>Créneau choisi :</strong> {formatDay(draft.slot.date)},{" "}

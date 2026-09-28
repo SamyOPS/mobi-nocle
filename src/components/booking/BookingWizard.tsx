@@ -216,7 +216,7 @@ function Wizard() {
         </h2>
 
         {notice ? (
-          <div role="status" className="rounded-3xl border-4 border-primary bg-lens-light p-5 text-lg font-bold">
+          <div role="status" className="rounded-3xl border-2 border-primary bg-lens-light p-5 text-lg font-bold">
             {frTypo(notice)}
           </div>
         ) : null}
@@ -240,7 +240,7 @@ function Wizard() {
         ) : null}
 
         {sendError ? (
-          <div role="alert" className="rounded-3xl border-4 border-error bg-white p-6">
+          <div role="alert" className="rounded-3xl border-2 border-error bg-white p-6">
             <p className="text-xl font-bold text-error">Le rendez-vous n&apos;a pas pu être enregistré.</p>
             <p className="mt-2">Réessayez dans un instant, ou appelez-nous : nous le prendrons avec vous.</p>
             <div className="mt-4">
@@ -290,7 +290,7 @@ function Confirmation({ headingRef, draft, confirmation, onRestart }: Confirmati
   return (
     <div className="space-y-8">
       <DemoBanner />
-      <div className="rounded-3xl border-4 border-primary bg-lens-light p-6 sm:p-8">
+      <div className="rounded-3xl border-2 border-primary bg-lens-light p-6 sm:p-8">
         <div className="flex items-start gap-4">
           <CheckIcon className="mt-1 size-9 shrink-0 text-primary" />
           <div>

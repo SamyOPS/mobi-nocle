@@ -7,10 +7,10 @@ type FramedCircleProps = {
 };
 
 const sizes = {
-  sm: "size-12 border-4 text-xl",
-  md: "size-16 border-[5px] text-2xl",
-  lg: "size-32 border-[6px]",
-  xl: "size-52 border-8 sm:size-60",
+  sm: "size-12 border-2 text-xl",
+  md: "size-16 border-2 text-2xl",
+  lg: "size-32 border-4",
+  xl: "size-52 border-[5px] sm:size-60",
 };
 
 /**

@@ -100,7 +100,7 @@ export function CallbackForm() {
         ref={successRef}
         tabIndex={-1}
         role="status"
-        className="rounded-3xl border-4 border-primary bg-lens-light p-8"
+        className="rounded-3xl border-2 border-primary bg-lens-light p-8"
       >
         <div className="flex items-start gap-4">
           <CheckIcon className="mt-1 size-8 shrink-0 text-primary" />
@@ -140,7 +140,7 @@ export function CallbackForm() {
           ref={summaryRef}
           tabIndex={-1}
           role="alert"
-          className="rounded-3xl border-4 border-error bg-white p-6"
+          className="rounded-3xl border-2 border-error bg-white p-6"
         >
           <h2 className="text-2xl text-error">
             {errorFields.length === 1
@@ -163,7 +163,7 @@ export function CallbackForm() {
       ) : null}
 
       {status === "error" ? (
-        <div role="alert" className="rounded-3xl border-4 border-error bg-white p-6">
+        <div role="alert" className="rounded-3xl border-2 border-error bg-white p-6">
           <h2 className="text-2xl text-error">L&apos;envoi n&apos;a pas fonctionné</h2>
           <p className="mt-2">
             Votre demande n&apos;a pas pu être envoyée. Réessayez dans un instant, ou appelez-nous

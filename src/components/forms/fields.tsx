@@ -160,7 +160,7 @@ type ErrorSummaryProps = {
 export function ErrorSummary({ errors, ref }: ErrorSummaryProps) {
   if (errors.length === 0) return null;
   return (
-    <div ref={ref} tabIndex={-1} role="alert" className="rounded-3xl border-4 border-error bg-white p-6">
+    <div ref={ref} tabIndex={-1} role="alert" className="rounded-3xl border-2 border-error bg-white p-6">
       <h3 className="text-2xl text-error">
         {errors.length === 1
           ? "Une information est à corriger"

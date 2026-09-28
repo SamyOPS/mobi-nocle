@@ -25,7 +25,7 @@ export default function RendezVousPage() {
         <div className="grid items-start gap-10 lg:grid-cols-[1fr_20rem]">
           <div className="min-w-0">
             <noscript>
-              <div className="rounded-3xl border-4 border-primary bg-lens-light p-6 text-lg">
+              <div className="rounded-3xl border-2 border-primary bg-lens-light p-6 text-lg">
                 <p className="font-bold">
                   La prise de rendez-vous en ligne nécessite JavaScript, qui semble désactivé.
                 </p>

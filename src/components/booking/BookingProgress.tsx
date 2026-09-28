@@ -13,7 +13,7 @@ export function BookingProgress({ current }: { current: StepIndex }) {
           <li key={step.id} className="flex flex-1 items-center gap-2 last:flex-none">
             <span
               className={cn(
-                "flex size-9 shrink-0 items-center justify-center rounded-full border-4 font-display text-base font-black",
+                "flex size-9 shrink-0 items-center justify-center rounded-full border-2 font-display text-base font-black",
                 index < current && "border-primary bg-primary text-white",
                 index === current && "border-ink bg-lens text-ink",
                 index > current && "border-ink-soft bg-white text-ink-soft",
